@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './styles/Checkin.css';
+import { Link } from 'react-router-dom'; // Import Link
+
 
 class Checkin extends Component {
   constructor(props) {
@@ -63,6 +65,10 @@ class Checkin extends Component {
 
   render() {
     return (
+        <div className="label">
+        <div className="text-wrapper">Appointment with Toby</div>
+      
+    
       <div className="countdown-timer-container">
         <div className="countdown-timer">
           <div className="checkin-button-container">
@@ -82,13 +88,16 @@ class Checkin extends Component {
             )}
           </div>
           <div className="buttons">
+          <Link to="/chat"> 
             <button className="button chat">Chat</button>
+        </Link>
             <button className={`button alert ${this.state.isAlertActive ? 'active' : ''}`}>
               ALERT
             </button>
             <button className="button call">Call</button>
           </div>
         </div>
+      </div>
       </div>
     );
   }
