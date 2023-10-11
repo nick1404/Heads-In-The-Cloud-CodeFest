@@ -16,16 +16,16 @@ function createData(trackingNo, name, fat, carbs, protein) {
 }
 
 const rows = [
-  createData(84564564, 'Camera Lens', 40, 2, 40570),
-  createData(98764564, 'Laptop', 300, 0, 180139),
-  createData(98756325, 'Mobile', 355, 1, 90989),
-  createData(98652366, 'Handset', 50, 1, 10239),
-  createData(13286564, 'Computer Accessories', 100, 1, 83348),
-  createData(86739658, 'TV', 99, 0, 410780),
-  createData(13256498, 'Keyboard', 125, 2, 70999),
-  createData(98753263, 'Mouse', 89, 2, 10570),
-  createData(98753275, 'Desktop', 185, 1, 98063),
-  createData(98753291, 'Chair', 100, 0, 14001)
+  createData(84564564, 'Daniel', "Nancy", 2, 40570),
+  createData(98764564, 'Emma', "Olivia", 0, 180139),
+  createData(98756325, 'Frank', "Peter", 1, 90989),
+  createData(98652366, 'Graham', "Quinn", 1, 10239),
+  createData(13286564, 'Helen', "Rick", 1, 83348),
+  createData(86739658, 'Ian', "Steve", 0, 410780),
+  createData(13256498, 'Jack', "Tony", 2, 70999),
+  createData(98753263, 'Kevin', "Usher", 2, 10570),
+  createData(98753275, 'Linda', "Vicky", 1, 98063),
+  createData(98753291, 'Mary', "Will", 0, 14001)
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -61,19 +61,19 @@ const headCells = [
     id: 'trackingNo',
     align: 'left',
     disablePadding: false,
-    label: 'Tracking No.'
+    label: 'Service No.'
   },
   {
     id: 'name',
     align: 'left',
     disablePadding: true,
-    label: 'Product Name'
+    label: 'Consultant'
   },
   {
     id: 'fat',
     align: 'right',
     disablePadding: false,
-    label: 'Total Order'
+    label: 'Client'
   },
   {
     id: 'carbs',

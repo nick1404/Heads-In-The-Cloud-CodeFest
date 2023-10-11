@@ -15,6 +15,7 @@ const Typography = Loadable(lazy(() => import('pages/components-overview/Typogra
 const Color = Loadable(lazy(() => import('pages/components-overview/Color')));
 const Shadow = Loadable(lazy(() => import('pages/components-overview/Shadow')));
 const AntIcons = Loadable(lazy(() => import('pages/components-overview/AntIcons')));
+const SimpleMap = Loadable(lazy(() => import('pages/dashboard/DetailMap')))
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -25,6 +26,10 @@ const MainRoutes = {
     {
       path: '/',
       element: <DashboardDefault />
+    },
+    {
+      path: 'detail',
+      element: <SimpleMap />
     },
     {
       path: 'color',

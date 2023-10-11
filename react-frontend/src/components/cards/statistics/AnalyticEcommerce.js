@@ -6,12 +6,11 @@ import { Box, Chip, Grid, Stack, Typography } from '@mui/material';
 // project import
 import MainCard from 'components/MainCard';
 
-// assets
+// assetsl
 import { RiseOutlined, FallOutlined } from '@ant-design/icons';
 
-// ==============================|| STATISTICS - ECOMMERCE CARD  ||============================== //
-
-const AnalyticEcommerce = ({ color, title, count, percentage, isLoss, extra }) => (
+const AnalyticEcommerce = ({ color, title, name, percentage, isLoss, extra }) => (
+  
   <MainCard contentSX={{ p: 2.25 }}>
     <Stack spacing={0.5}>
       <Typography variant="h6" color="textSecondary">
@@ -20,7 +19,7 @@ const AnalyticEcommerce = ({ color, title, count, percentage, isLoss, extra }) =
       <Grid container alignItems="center">
         <Grid item>
           <Typography variant="h4" color="inherit">
-            {count}
+            {name}
           </Typography>
         </Grid>
         {percentage && (
@@ -34,7 +33,10 @@ const AnalyticEcommerce = ({ color, title, count, percentage, isLoss, extra }) =
                   {isLoss && <FallOutlined style={{ fontSize: '0.75rem', color: 'inherit' }} />}
                 </>
               }
-              label={`${percentage}%`}
+              label={<>
+                {!isLoss && <a>Safe</a>}
+                {isLoss && <a>needs to check</a>}
+              </>}
               sx={{ ml: 1.25, pl: 1 }}
               size="small"
             />
@@ -43,21 +45,29 @@ const AnalyticEcommerce = ({ color, title, count, percentage, isLoss, extra }) =
       </Grid>
     </Stack>
     <Box sx={{ pt: 2.25 }}>
-      <Typography variant="caption" color="textSecondary">
-        You made an extra{' '}
+      {!isLoss && <Typography variant="caption" color="textSecondary">
+        The appointment will end in {' '}
         <Typography component="span" variant="caption" sx={{ color: `${color || 'primary'}.main` }}>
           {extra}
         </Typography>{' '}
-        this year
-      </Typography>
+        minutes
+      </Typography>}
+      {isLoss && <Typography variant="caption" color="textSecondary">
+        The appointment ended {' '}
+        <Typography component="span" variant="caption" sx={{ color: `${color || 'primary'}.main` }}>
+          {extra}
+        </Typography>{' '}
+        minutes ago, but yet checked out!
+      </Typography>}
     </Box>
   </MainCard>
+  
 );
 
 AnalyticEcommerce.propTypes = {
   color: PropTypes.string,
   title: PropTypes.string,
-  count: PropTypes.string,
+  name: PropTypes.string,
   percentage: PropTypes.number,
   isLoss: PropTypes.bool,
   extra: PropTypes.oneOfType([PropTypes.node, PropTypes.string])

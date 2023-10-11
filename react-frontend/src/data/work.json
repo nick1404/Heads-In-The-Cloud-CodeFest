@@ -1,0 +1,20 @@
+[
+        {
+            "workerName" : "Anna",
+            "workingHour": 2,
+            "workingPlace": "11, Example Street, EX1 EXP",
+            "startTimeStamp" : 1697037164
+        }, 
+        {
+            "workerName" : "Betty",
+            "workingHour": 2,
+            "workingPlace": "12, Example Street, EX3 EXP",
+            "startTimeStamp" : 1697031234
+        },
+        {
+            "workerName" : "Charlie",
+            "workingHour": 3,
+            "workingPlace": "14, Example Street, EX1 EXP",
+            "startTimeStamp" : 169701252
+        }
+    ]
