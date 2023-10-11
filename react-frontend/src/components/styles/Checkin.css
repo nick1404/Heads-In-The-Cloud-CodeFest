@@ -33,7 +33,20 @@
     margin: 0 auto;
     cursor: pointer;
   }
-  
+
+  .button.checkout {
+    background-color: #1171a0;
+    color: #fff;
+    font-size: 24px; /* Increase font size */
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    width: 200px; /* Increase button width */
+    height: 200px; /* Increase button height */
+    padding: 40px; /* Increase padding */
+    margin: 0 auto;
+    cursor: pointer;
+  }
   
   
   h2 {
