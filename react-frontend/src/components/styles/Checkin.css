@@ -1,0 +1,101 @@
+.countdown-timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Add a background color */
+  }
+  
+  .countdown-timer {
+    text-align: center;
+    background-color: transparent; /* Remove background color */
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 500px; /* Set a fixed width for a square container */
+    height: 500px; /* Set a fixed height for a square container */
+  }
+  
+  .checkin-button-container {
+    text-align: center;
+  }
+  
+  .button.checkin {
+    background-color: #5bb6e2;
+    color: #fff;
+    font-size: 24px; /* Increase font size */
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    width: 200px; /* Increase button width */
+    height: 200px; /* Increase button height */
+    padding: 40px; /* Increase padding */
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  
+  
+  
+  h2 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .countdown-clock {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+
+  
+  .button.alert.active {
+    background-color: #ff2d00; /* Active state styling */
+  }
+  
+
+  .button:hover {
+    opacity: 0.8;
+  }
+
+  /* Add this CSS for the button alignment and sizing */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align buttons vertically */
+  }
+  
+  .button.chat,
+  .button.call,
+  .button.alert {
+    padding: 12px 24px; /* Adjust the padding for all buttons */
+    border-radius: 5px; /* Keep border radius consistent */
+    font-weight: bold;
+  }
+  
+  .button.chat,
+  .button.call {
+    background-color: #0a73e1;
+    color: #fff;
+    height: 40px;
+    width: 90px;
+  }
+  
+  .button.alert {
+    background-color: #ff2d00;
+    color: #fff;
+    font-size: 20px; /* Make the "Alert" button bigger */
+    padding: 16px 32px; /* Adjust padding for the "Alert" button */
+  }
+  

@@ -1,7 +1,7 @@
 // src/components/Chat.js
 
 import React, { useState } from 'react';
-import './ChatBox.css';
+import './styles/ChatBox.css';
 
 function Chat() {
   const [messages, setMessages] = useState([]);
