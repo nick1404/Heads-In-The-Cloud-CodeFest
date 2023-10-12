@@ -23,7 +23,7 @@ const SimpleMap = Loadable(lazy(() => import('pages/dashboard/DetailMap')))
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
-  path: '/',
+  path: '/free',
   element: <MainLayout />,
   children: [
     {
