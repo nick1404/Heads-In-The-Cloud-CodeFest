@@ -16,16 +16,16 @@ function createData(trackingNo, name, fat, carbs, protein) {
 }
 
 const rows = [
-  createData(84564564, 'Daniel', "Nancy", 2, 40570),
-  createData(98764564, 'Emma', "Olivia", 0, 180139),
-  createData(98756325, 'Frank', "Peter", 1, 90989),
-  createData(98652366, 'Graham', "Quinn", 1, 10239),
-  createData(13286564, 'Helen', "Rick", 1, 83348),
-  createData(86739658, 'Ian', "Steve", 0, 410780),
-  createData(13256498, 'Jack', "Tony", 2, 70999),
-  createData(98753263, 'Kevin', "Usher", 2, 10570),
-  createData(98753275, 'Linda', "Vicky", 1, 98063),
-  createData(98753291, 'Mary', "Will", 0, 14001)
+  createData(84564564, 'Daniel', "Nancy", 2, 2),
+  createData(98764564, 'Emma', "Olivia", 0, 1),
+  createData(98756325, 'Frank', "Peter", 1, 2),
+  createData(98652366, 'Graham', "Quinn", 1, 2),
+  createData(13286564, 'Helen', "Rick", 1, 1),
+  createData(86739658, 'Ian', "Steve", 0, 2),
+  createData(13256498, 'Jack', "Tony", 2, 3),
+  createData(98753263, 'Kevin', "Usher", 2, 2),
+  createData(98753275, 'Linda', "Vicky", 1, 2),
+  createData(98753291, 'Mary', "Will", 0, 1)
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -86,7 +86,7 @@ const headCells = [
     id: 'protein',
     align: 'right',
     disablePadding: false,
-    label: 'Total Amount'
+    label: 'Serving Hours'
   }
 ];
 
@@ -125,15 +125,15 @@ const OrderStatus = ({ status }) => {
   switch (status) {
     case 0:
       color = 'warning';
-      title = 'Pending';
+      title = 'Late Home';
       break;
     case 1:
       color = 'success';
-      title = 'Approved';
+      title = 'Home';
       break;
     case 2:
       color = 'error';
-      title = 'Rejected';
+      title = 'Not Home';
       break;
     default:
       color = 'primary';
@@ -211,7 +211,7 @@ export default function OrderTable() {
                     <OrderStatus status={row.carbs} />
                   </TableCell>
                   <TableCell align="right">
-                    <NumberFormat value={row.protein} displayType="text" thousandSeparator prefix="$" />
+                    <NumberFormat value={row.protein} displayType="text" thousandSeparator prefix="Hours: " />
                   </TableCell>
                 </TableRow>
               );

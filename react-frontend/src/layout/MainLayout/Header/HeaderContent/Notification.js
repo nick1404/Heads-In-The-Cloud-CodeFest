@@ -25,7 +25,7 @@ import MainCard from 'components/MainCard';
 import Transitions from 'components/@extended/Transitions';
 
 // assets
-import { BellOutlined, CloseOutlined, GiftOutlined, MessageOutlined, SettingOutlined } from '@ant-design/icons';
+import { BellOutlined, CloseOutlined, MessageOutlined } from '@ant-design/icons';
 
 // sx styles
 const avatarSX = {
@@ -78,7 +78,7 @@ const Notification = () => {
         aria-haspopup="true"
         onClick={handleToggle}
       >
-        <Badge badgeContent={4} color="primary">
+        <Badge badgeContent={2} color="primary">
           <BellOutlined />
         </Badge>
       </IconButton>
@@ -136,35 +136,6 @@ const Notification = () => {
                       }
                     }}
                   >
-                    <ListItemButton>
-                      <ListItemAvatar>
-                        <Avatar
-                          sx={{
-                            color: 'success.main',
-                            bgcolor: 'success.lighter'
-                          }}
-                        >
-                          <GiftOutlined />
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={
-                          <Typography variant="h6">
-                            It&apos;s{' '}
-                            <Typography component="span" variant="subtitle1">
-                              Cristina danny&apos;s
-                            </Typography>{' '}
-                            birthday today.
-                          </Typography>
-                        }
-                        secondary="2 min ago"
-                      />
-                      <ListItemSecondaryAction>
-                        <Typography variant="caption" noWrap>
-                          3:00 AM
-                        </Typography>
-                      </ListItemSecondaryAction>
-                    </ListItemButton>
                     <Divider />
                     <ListItemButton>
                       <ListItemAvatar>
@@ -181,12 +152,12 @@ const Notification = () => {
                         primary={
                           <Typography variant="h6">
                             <Typography component="span" variant="subtitle1">
-                              Aida Burg
+                              Charlie
                             </Typography>{' '}
-                            commented your post.
+                            has not chechekd out for his meeting!!
                           </Typography>
                         }
-                        secondary="5 August"
+                        secondary="3 minutes ago"
                       />
                       <ListItemSecondaryAction>
                         <Typography variant="caption" noWrap>
@@ -194,36 +165,7 @@ const Notification = () => {
                         </Typography>
                       </ListItemSecondaryAction>
                     </ListItemButton>
-                    <Divider />
-                    <ListItemButton>
-                      <ListItemAvatar>
-                        <Avatar
-                          sx={{
-                            color: 'error.main',
-                            bgcolor: 'error.lighter'
-                          }}
-                        >
-                          <SettingOutlined />
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={
-                          <Typography variant="h6">
-                            Your Profile is Complete &nbsp;
-                            <Typography component="span" variant="subtitle1">
-                              60%
-                            </Typography>{' '}
-                          </Typography>
-                        }
-                        secondary="7 hours ago"
-                      />
-                      <ListItemSecondaryAction>
-                        <Typography variant="caption" noWrap>
-                          2:45 PM
-                        </Typography>
-                      </ListItemSecondaryAction>
-                    </ListItemButton>
-                    <Divider />
+
                     <ListItemButton>
                       <ListItemAvatar>
                         <Avatar
@@ -239,15 +181,15 @@ const Notification = () => {
                         primary={
                           <Typography variant="h6">
                             <Typography component="span" variant="subtitle1">
-                              Cristina Danny
+                              Anna 
                             </Typography>{' '}
-                            invited to join{' '}
+                            Finished{' '}
                             <Typography component="span" variant="subtitle1">
-                              Meeting.
+                              Her in-person meeting.
                             </Typography>
                           </Typography>
                         }
-                        secondary="Daily scrum meeting time"
+                        secondary="Hi I finished my meeting, I'm going home"
                       />
                       <ListItemSecondaryAction>
                         <Typography variant="caption" noWrap>
