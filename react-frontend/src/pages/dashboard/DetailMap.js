@@ -2,10 +2,13 @@ import React from "react";
 import GoogleMapReact from 'google-map-react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { useNavigate} from  'react-router-dom';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 export default function SimpleMap() {
+  const navigate = useNavigate();
+
   const percentage = 66;
 
   const defaultProps = {
@@ -87,14 +90,14 @@ export default function SimpleMap() {
       <div style={buttonContainerStyle}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
   <div style={{ display: 'flex', gap: '10px' }}>
-    <button style={{ backgroundColor: 'blue', color: 'white', width: '120px' }}>Chat</button>
-    <button style={{ backgroundColor: 'lightgreen', color: 'black', width: '120px' }}>Notify</button>
-    <button style={{ backgroundColor: 'lightblue', color: 'black', width: '120px' }}>Call</button>
+    <button style={{ backgroundColor: '#1C5BA7', color: 'white', width: '120px' }}
+    onClick = {()  => navigate("/chat")}
+    >Chat</button>
+    <button style={{ backgroundColor: '#5ABCD1', color: 'black', width: '120px' }}>Notify</button>
+    <button style={{ backgroundColor: '#1BB4EE', color: 'black', width: '120px' }}>Call</button>
   </div>
-  <button style={{ backgroundColor: 'grey', color: 'black', width: '180px' }}>Emergency</button>
+  <button style={{ backgroundColor: '#E2F4F7', color: 'black', width: '180px' }}>Emergency</button>
 </div>
-
-
 
 
       </div>

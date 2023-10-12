@@ -60,10 +60,10 @@ const DashboardDefault = () => {
         <Grid item xs={12} sm={6} md={4} lg={3} key={user.workerName} >
           <AnalyticEcommerce title={user.workingPlace} name={user.workerName} percentage={27.4} isLoss={user.isloss} color={user.color} extra={user.minutes}/>
           {!user.isloss && <Button variant="contained" color="success"  onClick = {()  => navigate("/detail")}>
-        check
+        detail
           </Button> }
           {user.isloss && <Button variant="contained" color="error"  onClick = {()  => navigate("/detail")}>
-        CHECK
+        DETAIL
           </Button> }
         </Grid>
         ))}
