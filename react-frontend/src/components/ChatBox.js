@@ -23,8 +23,17 @@ function Chat() {
   };
 
   return (
+    <div>
+       <div className="overlap-3">
+          <div className="text-wrapper">Your Appointment</div>
+          <div className="text-wrapper-2">Toby</div>
+          <div className="text-wrapper-3">11/10/2023 12:00 - 14:00</div>
+          <p className="text-wrapper">123 A Road, WA14 MADEUP</p>
+        </div>      
     <div className="chat-container">
+     
       <div className="chat">
+        
         <div className="chat-header">
           <span>John</span>
         </div>
@@ -45,6 +54,7 @@ function Chat() {
           <button onClick={handleSendMessage}>Send</button>
         </div>
       </div>
+    </div>
     </div>
   );
 }
